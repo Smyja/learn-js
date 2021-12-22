@@ -4,22 +4,48 @@ let overusedWords = ['really', 'very', 'basically'];
 
 let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 let storyWords=story.split(' ');
+// console.log(storyWords.join(' '))
 
 
 
 //array of storyWords without unnnecessary words
 let betterWords = storyWords.filter(item => !unnecessaryWords.includes(item));
-// console.log(betterWords);
+ console.log(betterWords.join(' '));
 
 const res = [];
+const dict={}
 let count = 0;
 for (i in overusedWords){
   for (j in storyWords){
+    
     if (overusedWords[i] === storyWords[j]){
-      count++;}
+      count++;
       }
+      }
+      
       res.push(count);
       count = 0;
+ 
    }
+
   //  return res;
-console.log(res);
+for(const [index,value] of overusedWords.entries()){
+      dict[value]=res[index];
+  }
+
+;
+
+console.log(dict)
+
+//sentence counter
+
+let sentences=0
+//loop through the story variable
+for (i in story){
+  // console.log(story[i])
+  if(story[i]==="."||story[i]==="!"){
+    sentences++
+  }
+}
+console.log(sentences)
+console.log(storyWords.length-1)
