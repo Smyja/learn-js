@@ -1,2 +1,2 @@
-# learn-js
-Repo for Learning javascript
+# learn
+Code challenges, i've solved.
