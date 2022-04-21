@@ -1,2 +1,2 @@
 # learn
-Code challenges, i've solved.
+Code challenges i've solved.
